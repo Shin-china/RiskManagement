@@ -1,7 +1,21 @@
-  cloudFoundryDeploy:
-    deployTool: 'mtaDeployPlugin'
-    deployType: 'standard'
-  hooks:
+### General project setup
+general:
+  inferBuildTool: true
+
+### Step-specific configuration
+steps:
+  mavenExecute:
+    dockerImage: devxci/mbtci:1.0.14
+
+  artifactPrepareVersion:
+    versioningType: cloud_noTag
+
+### Stage-specific configuration
+stages:
+  'Confirm':
+    manualConfirmation: false
+
+hooks:
   ans:
     serviceKeyCredentialsId: 'demo'
 
