@@ -1,0 +1,7 @@
+  cloudFoundryDeploy:
+    deployTool: 'mtaDeployPlugin'
+    deployType: 'standard'
+  hooks:
+  ans:
+    serviceKeyCredentialsId: 'demo'
+
